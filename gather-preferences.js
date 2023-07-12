@@ -28,14 +28,16 @@ exports.gatherPasswordPreferences = async () => {
     "Would you like to include letters in your password? [y/n] "
   );
 
+  if (preferences.useLetters) {
+    preferences.useUppercase = await askQuestion(
+      rl,
+      "Would you like to include uppercase letters in your password? [y/n] "
+    );
+  }
+
   preferences.useNumbres = await askQuestion(
     rl,
     "Would you like to include numbers in your password? [y/n] "
-  );
-
-  preferences.useUppercase = await askQuestion(
-    rl,
-    "Would you like to include uppercase letters in your password? [y/n] "
   );
 
   preferences.useSpecialCharacters = await askQuestion(
