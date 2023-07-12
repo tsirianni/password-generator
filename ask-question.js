@@ -12,6 +12,7 @@ exports.askQuestion = function (rlInterface, question, isPassLength) {
           console.error(
             "Invalid input received. The password length must be a number"
           );
+          process.exit(1);
         }
       } else {
         if (!acceptableInputs.includes(answer)) {
