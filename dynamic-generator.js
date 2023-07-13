@@ -1,34 +1,12 @@
 "use strict";
 
 const { gatherPasswordPreferences } = require("./gather-preferences");
+const getCharset = require("./get-charset");
 
 const generatePassword = async () => {
   const passwordPreferences = await gatherPasswordPreferences();
 
-  let charset =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
-
-  // Remove letters if unwanted
-  charset = passwordPreferences.useLetters
-    ? charset
-    : charset.replace(/[A-Za-z]/g, "");
-
-  // Remove uppercase letters if unwanted
-  if (passwordPreferences.useLetters) {
-    charset = passwordPreferences.useUppercase
-      ? charset
-      : charset.replace(/[A-Z]/g, "");
-  }
-
-  // Remove numbers if unwanted
-  charset = passwordPreferences.useNumbres
-    ? charset
-    : charset.replace(/[0-9]/g, "");
-
-  // Remove special characters if unwanted
-  charset = passwordPreferences.useSpecialCharacters
-    ? charset
-    : charset.replace(/[!@#$%^\&\*\(\)_\+]+/g, "");
+  const charset = getCharset(passwordPreferences);
 
   let password = "";
 

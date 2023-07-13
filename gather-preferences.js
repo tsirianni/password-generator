@@ -12,9 +12,9 @@ exports.gatherPasswordPreferences = async () => {
   const preferences = {
     length: null,
     useLetters: null,
-    useNumbres: null,
+    useNumbers: null,
     useUppercase: null,
-    useSpecialCharacters: null,
+    useSpecials: null,
   };
 
   const color = "\u001b[36m";
@@ -37,12 +37,12 @@ exports.gatherPasswordPreferences = async () => {
     );
   }
 
-  preferences.useNumbres = await askQuestion(
+  preferences.useNumbers = await askQuestion(
     rl,
     `${color} Would you like to include numbers in your password? [y/n] `
   );
 
-  preferences.useSpecialCharacters = await askQuestion(
+  preferences.useSpecials = await askQuestion(
     rl,
     `${color} Would you like to include special characters in your password? [y/n] `
   );
