@@ -10,6 +10,8 @@ I have worked with libs such as prompt and yargs for cli interaction, and they a
 
 It can be used in two ways, either with a npm script `npm run dynamic` or by running the executable `genPass` with the offered flags.
 
+**Note**: Before trying out the genPas with flags, make sure that the file is an executable with ls -l. If needed, use `chmod +x`.
+
 ## Dynamically generating a password
 
 Works just like eslint, when you are providing the preferences for your project, whether or not it uses typescript, esm or commonjs, etc. In here, the user is prompted to inform if the password should contain letters, uppercase, numbers and/or special characters and, of course, the desired password length. An example is provided below:
