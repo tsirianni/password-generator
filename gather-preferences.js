@@ -3,6 +3,12 @@
 const readline = require("node:readline");
 const { askQuestion } = require("./ask-question");
 
+/**
+
+Asynchronously gathers password preferences from the user by prompting a series of questions using the Nodejs' readline interface.
+
+@returns {Promise<object>} A promise that resolves with an object containing the password preferences.
+*/
 exports.gatherPasswordPreferences = async () => {
   const rl = readline.createInterface({
     input: process.stdin,
