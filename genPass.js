@@ -64,7 +64,6 @@ const userPreferences = {
 
 if (onlyArgumentsCount) {
   const [numbersOnly, specialsOnly, lettersOnly] = onlyFlags;
-  console.log("I arrived here");
 
   switch (process.argv[3]) {
     case numbersOnly:
