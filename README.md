@@ -20,7 +20,7 @@ Works just like eslint, when you are providing the preferences for your project,
 
 Some basic validation is provided. However, the chery of the cake here is that this whole interaction was created through the use of Node's core module `readline`, which I have recently discovered. Prior to this happy discovery, I was used to relying on the prompt module. Once again, I can't stress this enough, this is only for basic use cases and it does not replace all the functionalities that third-party modules provide, but it is really nice to know that, if possible, you can decrease your dependencies a little. Those who have experienced the tedious process of updating libs will know what I mean.
 
-## genPas executable (with flags)
+## genPass executable (with flags)
 
 This is another way of generating a password using a single cli command with flags to specify the preferences. It uses `process.argv` to access the flags passed and perform basic validation and create the user's password. An example can be found below:
 
@@ -28,12 +28,12 @@ This is another way of generating a password using a single cli command with fla
 
 The acceptable flags are:
 
-**--letters**: Specifies that the password should include lowercase letters.
-**--uppercase**: Specifies that the password should include uppercase letters. Requires the --letters flag to be passed as well.
-**--numbers**: Specifies that the password should include numbers.
-**--specials**: Specifies that the password should include special characters.
-**--numbers-only**: Specifies that the password should include only numbers.
-**--specials-only**: Specifies that the password should include only special characters.
+**--letters**: Specifies that the password should include lowercase letters.  
+**--uppercase**: Specifies that the password should include uppercase letters. Requires the --letters flag to be passed as well.  
+**--numbers**: Specifies that the password should include numbers.  
+**--specials**: Specifies that the password should include special characters.  
+**--numbers-only**: Specifies that the password should include only numbers.  
+**--specials-only**: Specifies that the password should include only special characters.  
 **--letters-only**: Specifies that the password should include only lowercase letters.
 
 # Conclusion
