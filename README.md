@@ -16,7 +16,7 @@ It can be used in two ways, either with a npm script `npm run dynamic` or by run
 
 Works just like eslint, when you are providing the preferences for your project, whether or not it uses typescript, esm or commonjs, etc. In here, the user is prompted to inform if the password should contain letters, uppercase, numbers and/or special characters and, of course, the desired password length. An example is provided below:
 
-![dynamically generated password](https://github.com/tsirianni/random-images/blob/cd17bb5fec3af8de5277a998967164519c2b85dd/zero-dependency-journey/password-example-dynamic.png)
+![image](https://github.com/tsirianni/password-generator/assets/92902666/eeeba8a1-e362-4908-b3da-ee87c31756ab)
 
 Some basic validation is provided. However, the chery of the cake here is that this whole interaction was created through the use of Node's core module `readline`, which I have recently discovered. Prior to this happy discovery, I was used to relying on the prompt module. Once again, I can't stress this enough, this is only for basic use cases and it does not replace all the functionalities that third-party modules provide, but it is really nice to know that, if possible, you can decrease your dependencies a little. Those who have experienced the tedious process of updating libs will know what I mean.
 
@@ -24,7 +24,7 @@ Some basic validation is provided. However, the chery of the cake here is that t
 
 This is another way of generating a password using a single cli command with flags to specify the preferences. It uses `process.argv` to access the flags passed and perform basic validation and create the user's password. An example can be found below:
 
-![genPass with flags](https://github.com/tsirianni/random-images/blob/cd17bb5fec3af8de5277a998967164519c2b85dd/zero-dependency-journey/password-example-genPass.png)
+![image](https://github.com/tsirianni/password-generator/assets/92902666/6b4d1d3b-ca99-4fc0-a06c-0f6ca8c98fd2)
 
 The acceptable flags are:
 
